@@ -1,0 +1,567 @@
+/* Reset cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Thanh điều hướng */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2563eb;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #2563eb;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 150px 5% 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 80vh;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 span {
+    color: #2563eb;
+}
+
+.hero-content h2 {
+    font-size: 1.5rem;
+    color: #475569;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: #ffffff;
+    margin-right: 15px;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-secondary {
+    border: 2px solid #2563eb;
+    color: #2563eb;
+}
+
+.btn-secondary:hover {
+    background-color: #eff6ff;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Overview Section */
+.overview {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.card {
+    background: #f8fafc;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.card h3 {
+    color: #0f172a;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.card p {
+    color: #475569;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skills-tags span {
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background-color: #0f172a;
+    color: #f8fafc;
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+footer h2 {
+    margin-bottom: 15px;
+}
+
+footer a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+.social-links {
+    margin: 20px 0;
+}
+
+.social-links a {
+    margin: 0 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+}
+
+.copyright {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+/* Responsive cơ bản cho Mobile */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 120px;
+    }
+    
+    .hero-image {
+        justify-content: center;
+        margin-top: 40px;
+    }
+    
+    .overview-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-links {
+        display: none; /* Trong thực tế cần làm menu hamburger cho mobile */
+    }
+}
+
+/* =========================================
+   CẬP NHẬT GIAO DIỆN CHỨNG CHỈ (DẠNG NGANG)
+   ========================================= */
+
+.certificates {
+    padding: 60px 0 100px;
+    background-color: #f8fafc; /* Đổi nhẹ tông nền để thẻ card màu trắng nổi bật lên */
+}
+
+/* Container chứa danh sách xếp chồng dọc */
+.cert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Khoảng cách giữa các thẻ */
+    max-width: 960px; /* Giới hạn độ rộng tối đa để giao diện tập trung, dễ nhìn */
+    margin: 0 auto;
+}
+
+/* Thẻ Chứng chỉ dạng ngang */
+.cert-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex; /* Kích hoạt Flexbox nằm ngang */
+    align-items: stretch; /* Đảm bảo chiều cao ảnh bằng chiều cao của phần chữ */
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.03);
+    transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+    border-color: #cbd5e1;
+}
+
+/* Khối ảnh bên trái */
+.cert-image {
+    flex: 0 0 35%; /* Chiếm 35% chiều rộng thẻ thay vì cố định một con số pixel */
+    min-width: 250px;
+    position: relative;
+    background-color: #f1f5f9;
+    display: flex; /* Dùng flex để căn giữa ảnh bên trong */
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Tạo khoảng trống xung quanh, đóng vai trò như một khung tranh */
+    overflow: hidden;
+}
+
+.cert-image img {
+    width: 100%;
+    height: auto; /* Chiều cao tự động điều chỉnh theo tỉ lệ gốc của ảnh */
+    max-height: 220px; /* Giới hạn chiều cao để thẻ không bị kéo dài quá mức */
+    object-fit: contain; /* Hiển thị toàn bộ chứng chỉ, không bị cắt lẹm nội dung */
+    display: block;
+    transition: transform 0.5s ease;
+    border-radius: 4px; /* Bo góc nhẹ cho giống tài liệu thực tế */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Đổ bóng nhẹ làm nổi bật tờ chứng chỉ */
+}
+
+/* Lớp phủ hover trên ảnh (Giữ nguyên hoặc cập nhật lại một chút cho khớp) */
+.cert-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 23, 42, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.cert-card:hover .cert-overlay {
+    opacity: 1;
+}
+
+.cert-card:hover .cert-image img {
+    transform: scale(1.05);
+}
+
+.cert-overlay a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 18px;
+    border: 2px solid #ffffff;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.cert-overlay a:hover {
+    background-color: #ffffff;
+    color: #2563eb;
+}
+
+/* =========================================
+   HỖ TRỢ THIẾT BỊ DI ĐỘNG (RESPONSIVE)
+   ========================================= */
+
+@media (max-width: 768px) {
+    .cert-card {
+        flex-direction: column; /* Chuyển về dạng dọc trên mobile */
+    }
+
+    .cert-image {
+        flex: auto; /* Hủy bỏ giới hạn 35% trên màn hình nhỏ */
+        width: 100%;
+        padding: 30px 20px; /* Nới lỏng khoảng cách trên dưới cho thoáng */
+    }
+    
+    .cert-image img {
+        max-height: 260px; /* Tăng nhẹ giới hạn chiều cao trên mobile để dễ nhìn chữ hơn */
+    }
+
+    .cert-content {
+        padding: 24px;
+    }
+}
+
+/* Khối nội dung bên phải */
+.cert-content {
+    flex: 1;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Căn giữa nội dung theo chiều dọc */
+}
+
+.cert-content h3 {
+    color: #0f172a;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.cert-issuer {
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+}
+
+.cert-desc {
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Nút "Xem ảnh gốc" phụ dưới chân mô tả (hữu ích khi hiển thị trên mobile) */
+.btn-view {
+    align-self: flex-start; /* Không cho nút kéo dài hết hàng */
+    font-size: 0.85rem;
+    color: #2563eb;
+    background-color: #eff6ff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.btn-view:hover {
+    background-color: #dbeafe;
+    border-color: #bfdbfe;
+}
+
+
+/* =========================================
+   HỖ TRỢ THIẾT BỊ DI ĐỘNG (RESPONSIVE)
+   ========================================= */
+
+@media (max-width: 768px) {
+    .cert-card {
+        flex-direction: column; /* Chuyển về dạng dọc trên mobile để vừa màn hình */
+    }
+
+    .cert-image {
+        flex: 0 0 200px; /* Giảm bớt chiều cao ảnh trên mobile */
+        width: 100%;
+    }
+
+    .cert-content {
+        padding: 24px;
+    }
+}
+
+
+/* =========================================
+   GIAO DIỆN TRANG DỰ ÁN & KINH NGHIỆM
+   ========================================= */
+
+.projects-section {
+    padding: 60px 0 100px;
+    background-color: #f8fafc;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.02);
+    transition: all 0.3s ease;
+    border-left: 5px solid #2563eb; /* Đường viền nhấn màu xanh bên trái */
+}
+
+.project-card:hover {
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+    transform: translateX(5px); /* Hiệu ứng trượt nhẹ sang phải khi hover */
+}
+
+/* Phần Tiêu đề dự án */
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 15px;
+}
+
+.project-title h3 {
+    font-size: 1.5rem;
+    color: #0f172a;
+    margin-bottom: 5px;
+}
+
+.company-name {
+    font-size: 1.1rem;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.project-date {
+    background-color: #f1f5f9;
+    color: #475569;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Phần Nội dung chi tiết */
+.project-body p {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.project-highlights {
+    list-style-type: none;
+    margin-bottom: 25px;
+}
+
+.project-highlights li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: #334155;
+    font-size: 0.95rem;
+}
+
+.project-highlights li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+/* Phần Thẻ công cụ (Tools/Tags) */
+.project-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-tools span {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid #bfdbfe;
+}
+
+/* Responsive cho trang Dự án */
+@media (max-width: 768px) {
+    .project-card {
+        padding: 25px;
+    }
+
+    .project-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-date {
+        align-self: flex-start;
+    }
+}
