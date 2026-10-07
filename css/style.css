@@ -38,10 +38,14 @@ header {
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: #2563eb;
-    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 90px; /* Bạn có thể tăng giảm thông số này để chỉnh độ to nhỏ của logo */
+    width: auto;
+    object-fit: contain;
 }
 
 .nav-links {
@@ -228,10 +232,40 @@ footer a {
 
 /* Responsive cơ bản cho Mobile */
 @media (max-width: 768px) {
+    /* --- PHẦN 1: CẬP NHẬT LẠI NAVBAR CHO MOBILE --- */
+    .navbar {
+        flex-direction: column; /* Đẩy Logo lên trên, Menu xuống dưới */
+        padding: 15px 5% 10px;
+    }
+    
+    .nav-links {
+        display: flex; /* Thay thế cho thuộc tính display: none cũ */
+        gap: 20px;
+        margin-top: 15px;
+        justify-content: center;
+        flex-wrap: wrap; /* Tự động xuống dòng nếu màn hình điện thoại quá hẹp */
+    }
+    
+    .nav-links a {
+        font-size: 0.95rem; /* Thu nhỏ chữ menu lại một chút cho cân đối */
+    }
+
+    /* --- PHẦN 2: TĂNG KHOẢNG CÁCH TRÁNH BỊ NAVBAR ĐÈ LÊN NỘI DUNG --- */
+    /* Do navbar ở mobile giờ đã cao hơn, cần đẩy các phần nội dung đầu trang xuống */
     .hero {
         flex-direction: column;
         text-align: center;
-        padding-top: 120px;
+        padding-top: 160px; /* Tăng từ 120px lên 160px */
+    }
+
+    .page-header {
+        padding-top: 140px;
+    }
+
+    /* --- PHẦN 3: CÁC CẤU HÌNH CŨ (GIỮ NGUYÊN) --- */
+    .hero-content h1 {
+        white-space: normal;
+        font-size: 2.2rem;
     }
     
     .hero-image {
@@ -242,10 +276,8 @@ footer a {
     .overview-grid {
         grid-template-columns: 1fr;
     }
-    
-    .nav-links {
-        display: none; /* Trong thực tế cần làm menu hamburger cho mobile */
-    }
+
+    /* ... Giữ nguyên các CSS mobile khác của chứng chỉ, dự án đang có ở bên dưới ... */
 }
 
 /* =========================================
