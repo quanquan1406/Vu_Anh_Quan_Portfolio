@@ -74,13 +74,14 @@ header {
 
 .hero-content {
     flex: 1;
-    max-width: 600px;
+    max-width: 750px; /* Tăng không gian hiển thị của vùng chữ từ 600px lên 750px */
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 2.8rem; /* Giảm nhẹ cỡ chữ một chút */
     color: #0f172a;
     margin-bottom: 10px;
+    white-space: nowrap; /* Bắt buộc toàn bộ tiêu đề nằm trên 1 dòng ở máy tính */
 }
 
 .hero-content h1 span {
